@@ -13,7 +13,7 @@ public class Callee2 extends MyIncrement{
          System.out.println(i);
      }
 
-    private class Clousure implements Incremetable {
+    private class closure implements Incremetable {
         @Override
         public void increment() {
             Callee2.this.increment();
@@ -21,7 +21,7 @@ public class Callee2 extends MyIncrement{
     }
 
     Incremetable getCallBackReference(){
-        return new Clousure();
+        return new closure();
     }
 
 }
